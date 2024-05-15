@@ -7,7 +7,7 @@ import EmbedBuilder from '../../strcut/utils/EmbedBuilder'
 export default new Interaction('voice-master', 
 	async (client: Client, interaction: CommandInteraction) => {
         client.db.creators.create(interaction.guild!.id)
-		interaction.reply({ embeds: [new EmbedBuilder().default(interaction.member as GuildMember, 'Success', 'Private channel management system successfully created')], ephemeral: true })
+		interaction.reply({ embeds: [new EmbedBuilder().default(interaction.member as GuildMember, 'Success', 'Özel kanal yönetim sistemi başarıyla oluşturuldu')], ephemeral: true })
 		return 
 	},
 	{
