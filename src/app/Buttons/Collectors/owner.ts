@@ -22,7 +22,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `The user is not found on the server.`
+                `Kullanıcı **bulunamadı**.`
             ) ],
             components: []
         })
@@ -33,7 +33,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `You cant transfer ownership to bot ${menu.member.voice.channel!.toString()}`
+                `Oda sahipliğini bot'a veremezsiniz ${menu.member.voice.channel!.toString()}`
             ) ],
             components: []
         })
@@ -44,7 +44,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `You've already got ownership. ${menu.member.voice.channel!.toString()}`
+                `Odaya zaten sahipsin. ${menu.member.voice.channel!.toString()}`
             ) ],
             components: []
         })
@@ -56,7 +56,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `${member.toString()} is not in the ${voice.toString()}`
+                `${member.toString()} kullanıcı ${voice.toString()} odada değil`
             ) ],
             components: []
         })
@@ -83,7 +83,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
         embeds: [ new EmbedBuilder().default(
             menu.member,
             config.buttons[menu.customId]!.title,
-            `You have successfully **passed** ${voice.toString()} of user ${member.toString()}. Your **permissions** in ${voice.toString()} have been **reset**`
+            `Odayı başarıyla kendinize **aktardınız** ${voice.toString()} ${member.toString()}. **İzinler** ${voice.toString()} başarıyla **sıfırlandı**`
         ) ],
         components: []
     })
