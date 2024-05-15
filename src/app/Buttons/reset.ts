@@ -15,7 +15,7 @@ export default new Interaction(
                 new EmbedBuilder().default(
                     button.member,
                     config.buttons[button.customId]!.title,
-                    `specify the **user** to whom you want to **reset** the permissions in ${button.member.voice.channel!.toString()}`
+                    `izinlerini **sıfırlamak** istediğiniz kullanıcıyı **seçiniz** ${button.member.voice.channel!.toString()}`
                 )
             ],
             components: new ActionRowBuilder().menuUser('reset', config.placeholder.user)
@@ -39,7 +39,7 @@ export default new Interaction(
                         new EmbedBuilder().default(
                             button.member,
                             config.buttons[button.customId]!.title,
-                            `You **didn't** specify a user`
+                            `Bir kullanıcı **seçmediniz**`
                         )
                     ],
                     components: new ActionRowBuilder().menuUser('reset', config.placeholder.user, true)
