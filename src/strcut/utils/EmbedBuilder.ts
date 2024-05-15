@@ -11,7 +11,7 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
     }
 
     settingRoomEmbed(client: Client) {
-        return this.setTitle('Manage your voice channel.')
+        return this.setTitle('Ses kanalınızı yönetin.')
         .setColor(settings.color)
         .setDescription(
             '> Odanızı özelleştirmek için aşağıdaki düğmeleri tıklayın' + '\n'
