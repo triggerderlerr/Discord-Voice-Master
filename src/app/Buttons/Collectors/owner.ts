@@ -9,7 +9,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `You **didn't** select a user`
+                `Bir kullanıcı **seçmediniz**.`
             ) ],
             components: []
         })
