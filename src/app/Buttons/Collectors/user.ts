@@ -33,7 +33,8 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `You **cannot** Give access to yourself`
+                `Kendinize erişim izni **veremezsiniz**.`
+               
             ) ],
             components: []
         })
@@ -57,7 +58,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
         embeds: [ new EmbedBuilder().default(
             menu.member,
             config.buttons[menu.customId]!.title,
-            `Succesfully **${state?'unbanned':'banned'}** user ${member.toString()} connection to ${voice.toString()}`
+            `Başarıyla **${state?'yasağı kaldırıldı':'yasaklandı'}** - ${member.toString()} - ${voice.toString()}`
         ) ],
         components: []
     })
