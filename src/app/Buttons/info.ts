@@ -15,7 +15,7 @@ export default new Interaction(
                 new EmbedBuilder().default(
                     button.member,
                     config.buttons[button.customId]!.title,
-                    `choose **private room**`
+                    `**özel oda** seçiniz`
                 )
             ],
             components: [
