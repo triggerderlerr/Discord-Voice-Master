@@ -21,7 +21,7 @@ export default async (button: ButtonInteraction<'cached'>, menu: UserSelectMenuI
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `Kendine erişim **veremezsin**.`
+                `Kendize erişim **veremezsiniz**.`
             ) ],
             components: []
         })
