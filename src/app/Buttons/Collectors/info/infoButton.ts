@@ -12,7 +12,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, btn: 
             embeds: [ new EmbedBuilder().default(
                 btn.member,
                 config.buttons[button.customId]!.title,
-                `**selected** voice channel **not** found or **not** a **private room**`
+                `**seçilen** ses kanalı **bulunamadı** veya **özel oda** değil`
             ) ],
             components: []
         })
@@ -24,7 +24,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, btn: 
             embeds: [ new EmbedBuilder().default(
                 btn.member,
                 config.buttons[button.customId]!.title,
-                `**selected** voice channel **not** found or **not** a **private room**`
+                `**seçilen** ses kanalı **bulunamadı** veya **özel oda** değil`
             ) ],
             components: []
         })
