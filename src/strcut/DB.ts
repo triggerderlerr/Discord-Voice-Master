@@ -115,9 +115,9 @@ class CreatorsManager extends Collection<string, Creator> {
 
     async create(guildId: string): Promise<Creator> {
         let guild = this.client.guilds.cache.get(guildId) as Guild
-        let category = await guild.channels.create({ name: 'Private channels', type: ChannelType.GuildCategory  })
-        let voiceChannel = await guild.channels.create({ name: 'Create a channel [+]', parent: category.id, type: ChannelType.GuildVoice })
-        let textChannel = await guild.channels.create({ name: 'instruction', type: ChannelType.GuildText, parent: category.id, permissionOverwrites: [{ id: guild.id, deny: [ PermissionFlagsBits.MentionEveryone, PermissionFlagsBits.SendMessages, PermissionFlagsBits.CreatePublicThreads, PermissionFlagsBits.CreatePrivateThreads, PermissionFlagsBits.ManageThreads] }] })
+        let category = await guild.channels.create({ name: 'Private Oda', type: ChannelType.GuildCategory  })
+        let voiceChannel = await guild.channels.create({ name: 'Oda Oluştur [+]', parent: category.id, type: ChannelType.GuildVoice })
+        let textChannel = await guild.channels.create({ name: 'talimat', type: ChannelType.GuildText, parent: category.id, permissionOverwrites: [{ id: guild.id, deny: [ PermissionFlagsBits.MentionEveryone, PermissionFlagsBits.SendMessages, PermissionFlagsBits.CreatePublicThreads, PermissionFlagsBits.CreatePrivateThreads, PermissionFlagsBits.ManageThreads] }] })
         
         let webhook = await textChannel.createWebhook({
             name: this.client.config.settings.webhook.name,
