@@ -7,7 +7,7 @@ export default class ActionRowBuilder {
             .addComponents(
                 new UserSelectMenuBuilder()
                 .setCustomId(customId)
-                .setPlaceholder(placeholder || 'Select user')
+                .setPlaceholder(placeholder || 'Kullanıcı Seç')
                 .setDisabled(Boolean(disabled))
             )
         ]
@@ -18,7 +18,7 @@ export default class ActionRowBuilder {
         .addComponents(
             new ChannelSelectMenuBuilder()
             .setCustomId(customId)
-            .setPlaceholder(placeholder || 'Select a channel')
+            .setPlaceholder(placeholder || 'Kanal Seç')
             .setDisabled(Boolean(disabled))
         )
     }
@@ -29,7 +29,7 @@ export default class ActionRowBuilder {
             new ButtonBuilder()
             .setStyle(ButtonStyle.Primary)
             .setCustomId('voiceChannel')
-            .setLabel('Select voice channel')
+            .setLabel('Ses Kanalı Seç')
             .setDisabled(Boolean(disabled))
         )  
     }
@@ -41,7 +41,7 @@ export default class ActionRowBuilder {
                 new ButtonBuilder()
                 .setStyle(ButtonStyle.Primary)
                 .setCustomId(`checkMembersPermission.${id}`)
-                .setLabel('View user permission')
+                .setLabel('Kullanıcı izinlerini görüntüle')
             )  
         ]
     }
