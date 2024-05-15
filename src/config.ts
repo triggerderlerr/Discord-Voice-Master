@@ -1,7 +1,7 @@
 import { GatewayIntentBits, Collection, ButtonStyle } from 'discord.js';
 
 export const internal = {
-    token: process.env.TOKEN', //Bot token (https://discord.com/developers/applications)
+    token: process.env.TOKEN, //Bot token (https://discord.com/developers/applications)
 }
 
 export const intents: GatewayIntentBits[] | number = 131071 // all intent
