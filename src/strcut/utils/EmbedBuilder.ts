@@ -15,7 +15,7 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
         .setColor(settings.color)
         .setDescription(
             '> Odanızı özelleştirmek için aşağıdaki düğmeleri tıklayın' + '\n'
-        ).setImage(settings?.line ? 'https://cdn.discordapp.com/attachments/1240076731860123658/1240402189911068802/Pngtreeblack_decorative_line_divider_layout_8293839.png?ex=66466e0f&is=66451c8f&hm=7471ec0c59ab116f727ddc504fce2c7110cd9f54a83b6d0bcd2241782233e3bb&' : null)
+        ).setImage(settings?.line ? 'https://cdn.discordapp.com/attachments/1240076731860123658/1240407529280770059/line.gif?ex=66467308&is=66452188&hm=44ac8d6deb2c589abee5bb4926a94f484990d07fa6326af10f2c3e54f28491eb&' : null)
         .addFields([ {
             name: '** **',
             value: 
