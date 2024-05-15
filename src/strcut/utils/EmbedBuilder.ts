@@ -14,7 +14,7 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
         return this.setTitle('Ses kanalınızı yönetin.')
         .setColor(settings.color)
         .setDescription(
-            '> Odanızı özelleştirmek için aşağıdaki düğmeleri tıklayın' + '\n'
+            '> Odanızı özelleştirmek için aşağıdaki düğmelere tıklayın' + '\n'
         ).setImage(settings?.line ? 'https://cdn.discordapp.com/attachments/1240076731860123658/1240407529280770059/line.gif?ex=66467308&is=66452188&hm=44ac8d6deb2c589abee5bb4926a94f484990d07fa6326af10f2c3e54f28491eb&' : null)
         .addFields([ {
             name: '** **',
