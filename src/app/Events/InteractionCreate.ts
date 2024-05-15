@@ -24,7 +24,7 @@ export default new Event(
                             member,
                             //@ts-ignore
                             config!.buttons[interaction.customId]?.title || 'Unknown interaction',
-                            'You are **not** in **your** private room'
+                            'Şu anda **özel odanızda** değilsiniz'
                         ) ], ephemeral: true
                     })
                 }
@@ -49,14 +49,14 @@ export default new Event(
                             member,
                             //@ts-ignore
                             config!.buttons[interaction.customId]?.title || 'Unknown interaction',
-                            'You are **not** in **your** private roomе'
+                            'Şu anda **özel odanızda** değilsiniz'
                         ) ], ephemeral: true
                     })
                 }
 
                 return (get.run as ModalRun)(client, interaction as ModalSubmitInteraction<'cached'>, config, settings, room)
             }
-            return interaction.reply({ content: 'Unknown interaction', ephemeral: true })
+            return interaction.reply({ content: 'Bilinmeyen etkileşim', ephemeral: true })
         }
     }
 )
