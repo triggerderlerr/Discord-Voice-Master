@@ -26,7 +26,7 @@ export default new Interaction(
             embeds: [ new EmbedBuilder().default(
                 button.member,
                 config.buttons[button.customId]!.title,
-                `You have successfully **${state?'opened':'closed'}** room ${voice.toString()} by @everyone`
+                `Odayı başarıyla herkese **${state?'açtınız':'kapattınız'}** - ${voice.toString()}`
             ) ]
         })
     }
