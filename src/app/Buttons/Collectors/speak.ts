@@ -33,7 +33,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `You **cannot** Give access to yourself`
+                `Kendine erişim **veremezsin**.`
             ) ],
             components: []
         })
