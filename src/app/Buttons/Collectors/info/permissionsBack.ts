@@ -11,8 +11,8 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, btn: 
         return button.editReply({
             embeds: [ new EmbedBuilder().default(
                 btn.member,
-                'Private room user permission',
-                `this **room** is no longer **exit**`
+                'Özel oda kullanıcı izni',
+                `bu **oda** artık **mevcut değil**`
             ) ],
             components: []
         })
@@ -24,8 +24,8 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, btn: 
         return button.editReply({
             embeds: [ new EmbedBuilder().default(
                 btn.member,
-                'Private room user permission',
-                `this **room** is no longer **exit**`
+                'Özel oda kullanıcı izni',
+                `bu **oda** artık **mevcut değil**`
             ) ],
             components: []
         })
