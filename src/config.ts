@@ -4,22 +4,6 @@ export const internal = {
     token: process.env.TOKEN, //Bot token (https://discord.com/developers/applications)
 }
 
-import express, { Application } from "express";
-import socketIO, { Server as SocketIOServer } from "socket.io";
-import { createServer, Server as HTTPServer } from "http";
-import path from "path";
-
-export class Server {
-  private httpServer: HTTPServer;
-  private app: Application;
-  private io: SocketIOServer;
-
-const PORT = process.env.PORT || 8888;
-
-http.createServer(app).listen(PORT, () => {
-    console.log(PORT);
-})
-
 
 export const intents: GatewayIntentBits[] | number = 131071 // all intent
 
