@@ -4,6 +4,11 @@ export const internal = {
   token: process.env.TOKEN, //Bot token (https://discord.com/developers/applications)
 };
 
+app.set('port', (process.env.PORT || 3000));
+app.listen(app.get('port'), function() {
+    console.log('Server started on port '+app.get('port'));
+});
+
 export const intents: GatewayIntentBits[] | number = 131071; // all intent
 
 export const cooldownVoiceJoin: number = 1000; // Movement delay
