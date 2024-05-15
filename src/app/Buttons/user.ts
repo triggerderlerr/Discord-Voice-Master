@@ -15,7 +15,7 @@ export default new Interaction(
                 new EmbedBuilder().default(
                     button.member,
                     config.buttons[button.customId]!.title,
-                    `specify the **user** you want to **allow** or **deny** to connect to ${button.member.voice.channel!.toString()}`
+                    `Odaya bağlanması için **izin vermek** veya **reddetmek** istediğiniz kullanıyı belirtin ${button.member.voice.channel!.toString()}`
                 )
             ],
             components: new ActionRowBuilder().menuUser('user', config.placeholder.user)
@@ -39,7 +39,7 @@ export default new Interaction(
                         new EmbedBuilder().default(
                             button.member,
                             config.buttons[button.customId]!.title,
-                            `You **didn't** specify a user`
+                            `Bir kullanıcı **seçmediniz**`
                         )
                     ],
                     components: new ActionRowBuilder().menuUser('user', config.placeholder.user, true)
