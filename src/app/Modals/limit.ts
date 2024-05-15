@@ -32,7 +32,7 @@ export default new Interaction(
             embeds: [ new EmbedBuilder().default(
                 modal.member,
                 config.buttons[modal.customId]!.title,
-                `You have **set** a new number of **join limits** for your **private room** ${modal.member.voice.channel!.toString()}`
+                `Özel odanız için **yeni bir** katılma limiti **belirlediniz** ${modal.member.voice.channel!.toString()}`
             ) ]
         })
     }
