@@ -14,8 +14,8 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
         return this.setTitle('Manage your voice channel.')
         .setColor(settings.color)
         .setDescription(
-            '> Click the following buttons to customize your room' + '\n'
-        ).setImage(settings?.line ? 'https://cdn.discordapp.com/attachments/966972126806573089/1104607266533031966/line.png' : null)
+            '> Odanızı özelleştirmek için aşağıdaki düğmeleri tıklayın' + '\n'
+        ).setImage(settings?.line ? 'https://cdn.discordapp.com/attachments/1240076731860123658/1240402189911068802/Pngtreeblack_decorative_line_divider_layout_8293839.png?ex=66466e0f&is=66451c8f&hm=7471ec0c59ab116f727ddc504fce2c7110cd9f54a83b6d0bcd2241782233e3bb&' : null)
         .addFields([ {
             name: '** **',
             value: 
@@ -36,7 +36,7 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
             inline: true
         }
         ])
-        .setFooter({text: 'You can only use them when you have a private channel'})
+        .setFooter({text: 'Bunları yalnızca özel bir kanalınız olduğunda kullanabilirsiniz'})
     }
 
     infoRoom(member: GuildMember, channel: VoiceChannel, get: any) {
@@ -46,12 +46,12 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
         .setThumbnail(Utils.getAvatar(member))
         .setColor(settings.color)
         .setDescription(
-            '**Private room:**' + ` ${channel.toString()}` + '\n'
-            + '**Users:**' + ` ${channel.members.size}/${channel.userLimit === 0 ? 'ꝏ' : channel.userLimit}` + '\n'
-            + '**Owner:**' + ` <@!${get.userId}>` + '\n'
-            + '**Created Time:**' + ` <t:${Math.round(get.created/1000)}>` + '\n'
-            + '**Is the room visible to everyone:**' + ` ${guildPerms && guildPerms.deny.has('ViewChannel') ? '❌' : '✅'}` + '\n'
-            + '**Is the room available to everyone:**' + ` ${guildPerms && guildPerms.deny.has('Connect') ? '❌' : '✅'}` + '\n'
+            '**Özel Oda:**' + ` ${channel.toString()}` + '\n'
+            + '**Kullanıcılar:**' + ` ${channel.members.size}/${channel.userLimit === 0 ? 'ꝏ' : channel.userLimit}` + '\n'
+            + '**Oda Sahibi:**' + ` <@!${get.userId}>` + '\n'
+            + '**Oluşturulan Zaman:**' + ` <t:${Math.round(get.created/1000)}>` + '\n'
+            + '**Oda herkes tarafından görülebilir mi?:**' + ` ${guildPerms && guildPerms.deny.has('ViewChannel') ? '❌' : '✅'}` + '\n'
+            + '**Oda herkese açık mı?:**' + ` ${guildPerms && guildPerms.deny.has('Connect') ? '❌' : '✅'}` + '\n'
         )
     }
 
@@ -62,7 +62,7 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
 
         const max = Math.ceil(array.length/5) === 0 ? 1 : Math.ceil(array.length/5)
 
-        const embed = this.setTitle('Private room user permission')
+        const embed = this.setTitle('Özel oda kullanıcı izni')
         .setThumbnail(Utils.getAvatar(member))
         .setColor(settings!.color)
         .setFooter(
@@ -77,8 +77,8 @@ export default class EmbedBuilder extends DJSEmbedBuilder {
                     {
                         name: `${i+1}. ${target.displayName}`,
                         value: (
-                            `> Can user joins in your voice channel?: ${p.deny.has('Connect') ? '❌' : '✅'}` + '\n'
-                            + `> Can user Speak in your voice channel?: ${p.deny.has('Speak') ? '❌' : '✅'}`
+                            `> Kullanıcı ses kanalınıza katılabilir mi?: ${p.deny.has('Connect') ? '❌' : '✅'}` + '\n'
+                            + `> Kullanıcı ses kanalınızda konuşabilir mi?: ${p.deny.has('Speak') ? '❌' : '✅'}`
                         )
                     }
                 )
