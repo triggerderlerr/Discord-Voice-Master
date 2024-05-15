@@ -4,6 +4,13 @@ export const internal = {
     token: process.env.TOKEN, //Bot token (https://discord.com/developers/applications)
 }
 
+export const PORT = process.env.PORT || 8888;
+
+http.createServer(app).listen(PORT, () => {
+    console.log(PORT);
+})
+
+
 export const intents: GatewayIntentBits[] | number = 131071 // all intent
 
 export const cooldownVoiceJoin: number = 1000 // Movement delay
