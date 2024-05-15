@@ -18,7 +18,7 @@ export default new Interaction(
                     embeds: [ new EmbedBuilder().default(
                         modal.member,
                         config.buttons[modal.customId]!.title,
-                        `**private room** ${voice.toString()} can be **renamed** via ** <t:${Math.round(room.cooldown/ 1000 )}:R>**`        
+                        `**özel oda** ${voice.toString()} yeniden **isimlendirildi** ** <t:${Math.round(room.cooldown/ 1000 )}:R>**`        
                     ) ]
                 })
             }
@@ -37,7 +37,7 @@ export default new Interaction(
             embeds: [ new EmbedBuilder().default(
                 modal.member,
                 config.buttons[modal.customId]!.title,
-                `You have **set** a new name for your **private room**  ${voice.toString()}`
+                `Özel odanız için yeni bir **isim** belirlediniz ${voice.toString()}`
             ) ]
         })
     }
