@@ -10,7 +10,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[button.customId]!.title,
-                `You **didn't** select a channel`
+                `Bir kanal **seçmediniz**`
             ) ],
             components: []
         })
@@ -24,7 +24,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[button.customId]!.title,
-                `**the selected** voice channel is **not** found or **not** a **private room**`
+                `**seçilen** ses kanalı **bulunamadı** veya **özel oda** değil`
             ) ],
             components: []
         })
