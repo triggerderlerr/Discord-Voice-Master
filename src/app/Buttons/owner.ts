@@ -15,7 +15,7 @@ export default new Interaction(
                 new EmbedBuilder().default(
                     button.member,
                     config.buttons[button.customId]!.title,
-                    `Select user to transfer ownership of ${button.member.voice.channel!.toString()}`
+                    `Odayı aktarmak istediğiniz kullanıcıyı seçiniz ${button.member.voice.channel!.toString()}`
                 )
             ],
             components: new ActionRowBuilder().menuUser('owner', config.placeholder.user)
@@ -39,7 +39,7 @@ export default new Interaction(
                         new EmbedBuilder().default(
                             button.member,
                             config.buttons[button.customId]!.title,
-                            `You **didn't** specify a user`
+                            `Bir kullanıcı **seçmediniz**`
                         )
                     ],
                     components: new ActionRowBuilder().menuUser('owner', config.placeholder.user, true)
