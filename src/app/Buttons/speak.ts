@@ -15,7 +15,7 @@ export default new Interaction(
                 new EmbedBuilder().default(
                     button.member,
                     config.buttons[button.customId]!.title,
-                    `specify the **user** you want to **allow** or **deny** in${button.member.voice.channel!.toString()} **говорить**`
+                    `**izin vermek** veya **reddetmek** istediğiniz **kullanıcıyı** belirtin ${button.member.voice.channel!.toString()}`
                 )
             ],
             components: new ActionRowBuilder().menuUser('speak', config.placeholder.user)
@@ -39,7 +39,7 @@ export default new Interaction(
                         new EmbedBuilder().default(
                             button.member,
                             config.buttons[button.customId]!.title,
-                            `You **didn't** specify a user`
+                            `Bir kullanıcı **seçmediniz**`
                         )
                     ],
                     components: new ActionRowBuilder().menuUser('speak', config.placeholder.user, true)
