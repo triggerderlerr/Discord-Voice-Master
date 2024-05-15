@@ -9,7 +9,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `Bir kullanıcı **seçmediniz**`
+                `Bir kullanıcı **seçmediniz**.`
             ) ],
             components: []
         })
@@ -22,7 +22,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `The member not found on the server.`
+                `Kullanıcı **bulunamadı**.`
             ) ],
             components: []
         })
@@ -33,7 +33,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `You **can't** kick yourself`
+                `Kendinizi odadan **atamazsınız**.`
             ) ],
             components: []
         })
@@ -45,7 +45,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `${member.toString()} Not in the ${voice.toString()}`
+                `${member.toString()} kullanıcı ${voice.toString()} isimli odada değil.`
             ) ],
             components: []
         })
@@ -57,7 +57,7 @@ export default async (client: Client, button: ButtonInteraction<'cached'>, menu:
         embeds: [ new EmbedBuilder().default(
             menu.member,
             config.buttons[menu.customId]!.title,
-            `Succesfully kicked ${member.toString()} > ${voice.toString()}`
+            `Başarıyla odadan atıldı ${member.toString()} > ${voice.toString()}`
         ) ],
         components: []
     })
