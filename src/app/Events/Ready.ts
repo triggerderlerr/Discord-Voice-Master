@@ -11,7 +11,7 @@ export default new Event(
         once: true
     },
     async (client: Client) => {
-        client.logger.login(`Succesfully logged in as: ${client.user!.tag}`)
+        client.logger.login(`Olarak başarıyla giriş yapıldı: ${client.user!.tag}`)
         client.emojisStorage.init();
         let commandsList = client.commands.cache;
         let clientCommands = await client.application?.commands.fetch() || []
