@@ -25,7 +25,7 @@ export default new Interaction(
             embeds: [ new EmbedBuilder().default(
                 button.member,
                 config.buttons[button.customId]!.title,
-                `You have successfully **${state?'revealed':'hidden'}** room ${voice.toString()} by @everyone`
+                `Odayı başarıyla **${state?'görünür':'gizli'}** hâle getirdiniz ${voice.toString()}`
             ) ]
         })
     }
