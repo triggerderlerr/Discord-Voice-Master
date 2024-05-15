@@ -8,7 +8,7 @@ export default async (button: ButtonInteraction<'cached'>, menu: UserSelectMenuI
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `User not found on that **server**`
+                `Kullanıcı **bulunamadı**.`
             ) ],
             components: []
         })
@@ -21,7 +21,7 @@ export default async (button: ButtonInteraction<'cached'>, menu: UserSelectMenuI
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `You **cannot** Give access to yourself`
+                `Kendine erişim **veremezsin**.`
             ) ],
             components: []
         })
@@ -32,7 +32,7 @@ export default async (button: ButtonInteraction<'cached'>, menu: UserSelectMenuI
             embeds: [ new EmbedBuilder().default(
                 menu.member,
                 config.buttons[menu.customId]!.title,
-                `Вы **не** можете **сбросить** права самому себе`
+                `İzinleri kendinize **veremezsiniz**.`
             ) ],
             components: []
         })
@@ -46,7 +46,7 @@ export default async (button: ButtonInteraction<'cached'>, menu: UserSelectMenuI
         embeds: [ new EmbedBuilder().default(
             menu.member,
             config.buttons[menu.customId]!.title,
-            `You have successfully **reset** user permissions ${member.toString()} to ${voice.toString()}`
+            `Oyuncunun izinlerini başarıyla **sıfırladınız** ${member.toString()} - ${voice.toString()}`
         ) ],
         components: []
     })
