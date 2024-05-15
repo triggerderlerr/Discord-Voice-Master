@@ -15,7 +15,7 @@ export default new Interaction(
                 new EmbedBuilder().default(
                     button.member,
                     config.buttons[button.customId]!.title,
-                    `specify the **user** you want to **kick** from ${button.member.voice.channel!.toString()}`
+                    `Atmak istediğiniz kullanıcıyı **seçiniz** ${button.member.voice.channel!.toString()}`
                 )
             ],
             components: new ActionRowBuilder().menuUser('kick', config.placeholder.user)
@@ -39,7 +39,7 @@ export default new Interaction(
                         new EmbedBuilder().default(
                             button.member,
                             config.buttons[button.customId]!.title,
-                            `Please mention user that you want to kick`
+                            `Lütfen odadan atmak istediğiniz kullanıcıyı seçin.`
                         )
                     ],
                     components: new ActionRowBuilder().menuUser('kick', config.placeholder.user, true)
