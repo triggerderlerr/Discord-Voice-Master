@@ -50,11 +50,18 @@ export default class VoiceManager {
                 type: ChannelType.GuildVoice,
                 parent: creator.categoryId,
                 permissionOverwrites: [
-                    {
-                        id: member.id,
-                        ...this.prototype.permissionsRoomOwner,
-                        type: OverwriteType.Member
-                    }
+                  {
+                    id: member.id,
+                    ...this.prototype.permissionsRoomOwner,
+                    type: OverwriteType.Member,
+                  },
+                  {
+                    id: "1236108818358734869",
+                    deny: [
+                      PermissionFlagsBits.ViewChannel,
+                    ],
+                   },
+                            
                 ],
                 reason: 'Creating a private room'
             }
