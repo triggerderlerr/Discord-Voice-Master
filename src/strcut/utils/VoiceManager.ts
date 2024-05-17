@@ -56,7 +56,7 @@ export default class VoiceManager {
                     type: OverwriteType.Member,
                   },
                   {
-                    id: "1236108818358734869",
+                    id: "1237843007349329948",
                     deny: [
                       PermissionFlagsBits.ViewChannel,
                     ],
