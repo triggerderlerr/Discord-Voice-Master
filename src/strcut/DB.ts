@@ -120,7 +120,7 @@ class CreatorsManager extends Collection<string, Creator> {
       type: ChannelType.GuildCategory,
         permissionOverwrites: [
           {
-            id: "1236108818358734869",
+            id: "1237843007349329948",
             deny: [
               PermissionFlagsBits.ViewChannel,
             ],
@@ -134,7 +134,7 @@ class CreatorsManager extends Collection<string, Creator> {
       type: ChannelType.GuildVoice,
         permissionOverwrites: [
           {
-            id: "1236108818358734869",
+            id: "1237843007349329948",
             deny: [
               PermissionFlagsBits.ViewChannel,
             ],
@@ -156,6 +156,12 @@ class CreatorsManager extends Collection<string, Creator> {
             PermissionFlagsBits.CreatePublicThreads,
             PermissionFlagsBits.CreatePrivateThreads,
             PermissionFlagsBits.ManageThreads,
+          ],
+        },
+        {
+            id: "1237843007349329948",
+          deny: [
+              PermissionFlagsBits.ViewChannel,
           ],
         },
       ],
