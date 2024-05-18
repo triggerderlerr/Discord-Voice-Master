@@ -124,7 +124,13 @@ class CreatorsManager extends Collection<string, Creator> {
             deny: [
               PermissionFlagsBits.ViewChannel,
             ],
-        },
+          },
+          {
+            id: "1241254408088715264",
+            deny: [
+              PermissionFlagsBits.ViewChannel,
+            ],
+          },
         
         ],
     });
@@ -138,7 +144,13 @@ class CreatorsManager extends Collection<string, Creator> {
             deny: [
               PermissionFlagsBits.ViewChannel,
             ],
-        },
+          },
+          {
+            id: "1241254408088715264",
+            deny: [
+              PermissionFlagsBits.ViewChannel,
+            ],
+          },
         
         ],
       
@@ -158,12 +170,18 @@ class CreatorsManager extends Collection<string, Creator> {
             PermissionFlagsBits.ManageThreads,
           ],
         },
-        {
+          {
             id: "1237843007349329948",
-          deny: [
+            deny: [
               PermissionFlagsBits.ViewChannel,
-          ],
-        },
+            ],
+          },
+          {
+            id: "1241254408088715264",
+            deny: [
+              PermissionFlagsBits.ViewChannel,
+            ],
+          },
       ],
     });
         let webhook = await textChannel.createWebhook({
