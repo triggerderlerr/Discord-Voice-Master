@@ -118,11 +118,29 @@ class CreatorsManager extends Collection<string, Creator> {
     let category = await guild.channels.create({
       name: "Private Oda",
       type: ChannelType.GuildCategory,
+        permissionOverwrites: [
+          {
+            id: "1236108818358734869",
+            deny: [
+              PermissionFlagsBits.ViewChannel,
+            ],
+        },
+        
+        ],
     });
     let voiceChannel = await guild.channels.create({
       name: "Oda Oluştur [+]",
       parent: category.id,
       type: ChannelType.GuildVoice,
+        permissionOverwrites: [
+          {
+            id: "1236108818358734869",
+            deny: [
+              PermissionFlagsBits.ViewChannel,
+            ],
+        },
+        
+        ],
       
     });
     let textChannel = await guild.channels.create({
