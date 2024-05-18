@@ -61,6 +61,12 @@ export default class VoiceManager {
                       PermissionFlagsBits.ViewChannel,
                     ],
                    },
+                  {
+                    id: "1241254408088715264",
+                    deny: [
+                      PermissionFlagsBits.ViewChannel,
+                    ],
+                  },
                             
                 ],
                 reason: 'Creating a private room'
