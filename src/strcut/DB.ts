@@ -116,7 +116,7 @@ class CreatorsManager extends Collection<string, Creator> {
   async create(guildId: string): Promise<Creator> {
     let guild = this.client.guilds.cache.get(guildId) as Guild;
     let category = await guild.channels.create({
-      name: "Private Oda",
+      name: "⛓ | ===== Private Oda ===== | ⛓",
       type: ChannelType.GuildCategory,
         permissionOverwrites: [
           {
